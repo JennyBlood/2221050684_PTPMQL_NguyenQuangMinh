@@ -3,7 +3,7 @@ namespace DemoController.Controllers
 
     using Microsoft.AspNetCore.Mvc;
 
-    public class DemoControllerController : Controller
+    public class DemoController : Controller
     {
         public IActionResult Index()
         {
