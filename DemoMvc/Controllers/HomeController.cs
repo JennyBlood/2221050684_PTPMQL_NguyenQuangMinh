@@ -6,8 +6,10 @@ namespace DemoMvc.Controllers;
 
 public class HomeController : Controller
 {
-    public IActionResult Index()
+     [HttpPost]
+    public IActionResult Index(string FullName, string StudentCode)
     {
+        ViewBag.ThongBao = "Xin chào: " + FullName + " - Mã sinh viên: " + StudentCode;
         return View();
     }
 
