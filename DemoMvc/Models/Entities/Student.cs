@@ -1,7 +1,10 @@
-namespace DemoMvc.Student.Entities 
-{    public class Student
+namespace DemoMvc.Models.Entities
+{
+    public class Student
     {
-        public string StudentCode { get; set; }
-        public string FullName { get; set; }
+        public int Id { get; set; }
+
+        public string StudentCode { get; set; } = "";
+        public string FullName { get; set; } = "";
     }
 }

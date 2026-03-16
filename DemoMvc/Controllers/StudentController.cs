@@ -1,8 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using DemoMVC.Data;
-using DemoMVC.Models.Entities;
+using DemoMvc.Data;
+using DemoMvc.Models.Entities;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography.X509Certificates;
-namespace DemoMVC.Controllers
+namespace DemoMvc.Controllers
 {    public class StudentController(ApplicationDbContext context) : Controller
     {
         private readonly ApplicationDbContext _context = context;
@@ -18,7 +19,7 @@ namespace DemoMVC.Controllers
             return View();
         }
         [HttpPost]
-        +        public IActionResult Create(Student std)
+                public IActionResult Create(Student std)
         {    _context.Students.Add(std);
             _context.SaveChanges();
             return RedirectToAction("Index");
